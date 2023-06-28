@@ -1,7 +1,7 @@
 #include <stdio.h>
 
     struct str_usuario{
-    int email;
+    char email[100];
     int idade;
     char nome[100];
     char sobrenome[100];
@@ -78,7 +78,7 @@ int main() {
     int operacao, saida;
     printf("\nOlá! Vamos iniciar seu cadastro!\n");
     printf("\nDigite um E-mail: ");
-    scanf ("%d", &usuario.email);
+    scanf ("%s", &usuario.email);
     printf("\nDigite seu nome: ");
     scanf("%s", usuario.nome);
     printf("\nDigite seu sobrenome: ");
@@ -120,7 +120,7 @@ int main() {
             calculaGasolina();
             break;
         case -1:
-            printf("Nome completo: %s %s \nE-mail: %d \nIdade: %d\n", usuario.nome, usuario.sobrenome, usuario.email, usuario.idade);
+            printf("Nome completo: %s %s \nE-mail: %s \nIdade: %d\n", usuario.nome, usuario.sobrenome, usuario.email, usuario.idade);
             break;
         default:
         break;
